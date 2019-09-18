@@ -13,6 +13,10 @@ public:
 	explicit std_base_thread(void) {};
 	virtual ~std_base_thread(void) {};
 
+	inline const std::thread::id get_id(void) const{
+		return m_id;
+	}
+
 protected:
 	inline static void start(thread_start_rtn _start_rtn,
 		std_base_thread* _kid_this) {

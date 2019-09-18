@@ -29,9 +29,9 @@ void common_pause(void)
 int main(void)
 {
 	test_thread test;
+	common_sleep(1);
+	std::cout << "id = " << test.get_id() << std::endl;
 	common_pause();
 	return 0;
 }
-
-
 
